@@ -1,12 +1,15 @@
-import { useNavigate } from "react-router";
+import { Link, useParams } from "react-router";
 
 function OrderPage() {
-  const navigate = useNavigate();
+  const { userName } = useParams();
 
   return (
     <>
-      <div>OrderPage</div>
-      <button onClick={() => navigate("/")}>Deconnexion</button>
+      <h1>Bonjour {userName}</h1>
+
+      <Link to={"/"}>
+        <button>Deconnexion</button>
+      </Link>
     </>
   );
 }

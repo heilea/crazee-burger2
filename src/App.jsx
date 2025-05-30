@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/order" element={<OrderPage />} />
+        <Route path="/order/:userName" element={<OrderPage />} />
 
         {/* Route catch-all pour 404 */}
         <Route path="*" element={<ErrorPage />} />
