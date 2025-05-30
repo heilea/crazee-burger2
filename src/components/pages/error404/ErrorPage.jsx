@@ -1,10 +1,13 @@
-function NotFound() {
+import { useNavigate } from "react-router";
+
+function ErrorPage() {
+  const navigate = useNavigate();
+
   return (
     <>
-      <div>Sorry this page does not exist</div>
-      <button>Retour a l'acceuil</button>
+      <button onClick={() => navigate("/")}>Retour a la page d'acceuil</button>
     </>
   );
 }
 
-export default NotFound;
+export default ErrorPage;

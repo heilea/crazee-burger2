@@ -1,5 +1,14 @@
+import { useNavigate } from "react-router";
+
 function OrderPage() {
-  return <div>OrderPage</div>;
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <div>OrderPage</div>
+      <button onClick={() => navigate("/")}>Deconnexion</button>
+    </>
+  );
 }
 
 export default OrderPage;
