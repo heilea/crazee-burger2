@@ -7,6 +7,7 @@ function LoginPage() {
   return (
     <LoginPageStyled>
       <Logo />
+
       <LoginForm />
     </LoginPageStyled>
   );
@@ -21,10 +22,11 @@ const LoginPageStyled = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  gap: 40px;
   width: 100%;
   height: 100dvh;
 
-  ::before {
+  &::before {
     content: "";
     background-image: url(${bgImage});
     background-size: cover;
