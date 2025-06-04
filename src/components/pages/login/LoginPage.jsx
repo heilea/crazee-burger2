@@ -16,8 +16,6 @@ function LoginPage() {
 export default LoginPage;
 
 const LoginPageStyled = styled.div`
-  //background-color: red;
-
   display: flex;
   justify-content: center;
   flex-direction: column;

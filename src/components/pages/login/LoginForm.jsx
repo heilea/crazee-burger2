@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import styled from "styled-components";
 import { theme } from "../../../theme/index";
-import { IoPersonCircle } from "react-icons/io5";
+import { IoChevronForward, IoPersonCircle } from "react-icons/io5";
+
 function LoginForm() {
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
@@ -32,7 +33,10 @@ function LoginForm() {
           required
         />
       </div>
-      <button>Accéder à mon espace</button>
+      <div className="wrap-button">
+        <button>Accéder à mon espace</button>
+        <IoChevronForward className="chevron" />
+      </div>
     </LoginFormStyled>
   );
 }
@@ -62,7 +66,7 @@ const LoginFormStyled = styled.form`
   h2 {
     color: ${theme.colors.white};
     font-size: ${theme.fonts.P4};
-    margin: 20px 10px 10px;
+    margin: 20px 10px 18px 10px;
   }
 
   .input-wrap {
@@ -82,6 +86,7 @@ const LoginFormStyled = styled.form`
       color: ${theme.colors.greySemiDark};
       //min-width: 1em;
     }
+
     input {
       border: none;
       font-size: 15px;
@@ -96,15 +101,45 @@ const LoginFormStyled = styled.form`
       color: ${theme.colors.greyLight};
     }
   }
-  button {
-    font-family: "Open Sans", sans-serif;
-    width: 100%;
+  .wrap-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: ${theme.colors.primary};
-    color: ${theme.colors.white};
-    font-size: ${theme.fonts.P0};
     border-radius: ${theme.borderRadius.round};
     font-weight: ${theme.weights.bold};
+    font-size: ${theme.fonts.P0};
+    color: ${theme.colors.white};
     padding: 18px 24px;
     margin-top: 18px;
+
+    &:hover:not(:disabled) {
+      background-color: ${theme.colors.white};
+      color: ${theme.colors.primary};
+      border: 1px solid ${theme.colors.primary};
+      transition: all 200ms ease-out;
+    }
+
+    &:active {
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.primary};
+      border: 1px solid ${theme.colors.primary};
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    button {
+      font-family: "Open Sans", sans-serif;
+      color: inherit;
+      background: none;
+      //width: 100%;
+    }
+
+    .chevron {
+      color: inherit;
+    }
   }
 `;
