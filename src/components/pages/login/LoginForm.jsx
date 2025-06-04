@@ -3,8 +3,8 @@ import { useNavigate } from "react-router";
 import styled from "styled-components";
 import { theme } from "../../../theme/index";
 import { IoChevronForward, IoPersonCircle } from "react-icons/io5";
-import Input from "./Input";
-import Button from "./Button";
+import Input from "../../reusable-ui/Input";
+import Button from "../../reusable-ui/Button";
 
 function LoginForm() {
   const [inputValue, setInputValue] = useState("");
@@ -55,7 +55,7 @@ const LoginFormStyled = styled.form`
   font-family: "Amatic SC", cursive;
 
   hr {
-    border: 1.5px solid ${theme.colors.primary};
+    border: 1.5px solid #f56a2c;
     margin-top: 32px;
     margin-bottom: 40px;
   }
