@@ -23,6 +23,7 @@ function LoginForm() {
       <hr />
       <h2 className="subtitle">Connectez-vous</h2>
       <div className="input-wrap">
+        <IoPersonCircle className="icon" />
         <input
           type="text"
           value={userName}
@@ -30,8 +31,8 @@ function LoginForm() {
           onChange={handleChange}
           required
         />
-        <button>Accéder à mon espace</button>
       </div>
+      <button>Accéder à mon espace</button>
     </LoginFormStyled>
   );
 }
@@ -66,27 +67,44 @@ const LoginFormStyled = styled.form`
 
   .input-wrap {
     display: flex;
-    flex-direction: column;
-    gap: 18px;
+    align-items: center;
+
+    font-family: "Open Sans", sans-serif;
+    background-color: ${theme.colors.background_white};
+    font-size: ${theme.fonts.P0};
+    border-radius: ${theme.borderRadius.round};
+    font-weight: ${theme.weights.regular};
+    padding: 18px 24px;
+
+    .icon {
+      font-size: 15px;
+      margin-right: 8px;
+      color: ${theme.colors.greySemiDark};
+      //min-width: 1em;
+    }
     input {
-      font-family: "Open Sans", sans-serif;
-
-      color: #d3d3d3;
+      border: none;
+      font-size: 15px;
+      color: ${theme.colors.dark};
       background-color: ${theme.colors.background_white};
-      font-size: ${theme.fonts.P0};
-      border-radius: ${theme.borderRadius.round};
-      font-weight: ${theme.weights.regular};
-      padding: 18px 24px;
+      //width:100%;
+      //display: flex;
     }
-    button {
-      font-family: "Open Sans", sans-serif;
 
-      background-color: ${theme.colors.primary};
-      color: ${theme.colors.white};
-      font-size: ${theme.fonts.P0};
-      border-radius: ${theme.borderRadius.round};
-      font-weight: ${theme.weights.bold};
-      padding: 18px 24px;
+    &::placeholder {
+      background-color: ${theme.colors.background_white};
+      color: ${theme.colors.greyLight};
     }
+  }
+  button {
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    background-color: ${theme.colors.primary};
+    color: ${theme.colors.white};
+    font-size: ${theme.fonts.P0};
+    border-radius: ${theme.borderRadius.round};
+    font-weight: ${theme.weights.bold};
+    padding: 18px 24px;
+    margin-top: 18px;
   }
 `;
