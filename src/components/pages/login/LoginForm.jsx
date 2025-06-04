@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { theme } from "../../../theme/index";
 import { IoChevronForward, IoPersonCircle } from "react-icons/io5";
 import Input from "./Input";
+import Button from "./Button";
 
 function LoginForm() {
   const [inputValue, setInputValue] = useState("");
@@ -29,14 +30,14 @@ function LoginForm() {
         value={inputValue}
         onChange={handleChange}
         placeholder={"Entrez votre prénom"}
-        icon={IoPersonCircle}
+        Icon={<IoPersonCircle className="icon" />}
         required
       />
 
-      <div className="wrap-button">
-        <button>Accéder à mon espace</button>
-        <IoChevronForward className="chevron" />
-      </div>
+      <Button
+        label={"Accéder à mon espace"}
+        Icon={<IoChevronForward className="chevron" />}
+      ></Button>
     </LoginFormStyled>
   );
 }
@@ -68,46 +69,13 @@ const LoginFormStyled = styled.form`
     font-size: ${theme.fonts.P4};
     margin: 20px 10px 18px 10px;
   }
+  .icon {
+    font-size: 1.2em;
 
-  .wrap-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: ${theme.colors.primary};
-    border-radius: ${theme.borderRadius.round};
-    font-weight: ${theme.weights.bold};
-    font-size: ${theme.fonts.P0};
-    color: ${theme.colors.white};
-    padding: 18px 24px;
-    margin-top: 18px;
-
-    &:hover:not(:disabled) {
-      background-color: ${theme.colors.white};
-      color: ${theme.colors.primary};
-      border: 1px solid ${theme.colors.primary};
-      transition: all 200ms ease-out;
-    }
-
-    &:active {
-      color: ${theme.colors.white};
-      background-color: ${theme.colors.primary};
-      border: 1px solid ${theme.colors.primary};
-    }
-
-    &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    button {
-      font-family: "Open Sans", sans-serif;
-      color: inherit;
-      background: none;
-      //width: 100%;
-    }
-
-    .chevron {
-      color: inherit;
-    }
+    color: ${theme.colors.greySemiDark};
+    //min-width: 1em;
+  }
+  .chevron {
+    color: inherit;
   }
 `;

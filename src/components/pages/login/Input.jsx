@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import { theme } from "../../../theme";
 
-function Input({ value, onChange, placeholder, required, icon: Icon }) {
+function Input({ value, onChange, placeholder, required, Icon }) {
   return (
     <InputWrapper>
-      {Icon && (
-        <span className="icon">
-          <Icon />
-        </span>
-      )}
+      {Icon}
       <input
         type="text"
         value={value}
@@ -32,13 +28,6 @@ const InputWrapper = styled.div`
   border-radius: ${theme.borderRadius.round};
   font-weight: ${theme.weights.regular};
   padding: 18px 24px;
-
-  .icon {
-    font-size: 1.2em;
-
-    color: ${theme.colors.greySemiDark};
-    //min-width: 1em;
-  }
 
   input {
     flex: 1;
