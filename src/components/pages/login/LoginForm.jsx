@@ -3,36 +3,36 @@ import { useNavigate } from "react-router";
 import styled from "styled-components";
 import { theme } from "../../../theme/index";
 import { IoChevronForward, IoPersonCircle } from "react-icons/io5";
+import Input from "./Input";
 
 function LoginForm() {
-  const [userName, setUserName] = useState("");
+  const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // alert(`Bonjour ${userName}`);
-    setUserName("");
-    navigate(`order/${userName}`);
+    // alert(`Bonjour ${inputValue}`);
+    setInputValue("");
+    navigate(`order/${inputValue}`);
   };
 
   const handleChange = (e) => {
-    setUserName(e.target.value);
+    setInputValue(e.target.value);
   };
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
       <h1 className="title">Bienvenus chez nous !</h1>
       <hr />
       <h2 className="subtitle">Connectez-vous</h2>
-      <div className="input-wrap">
-        <IoPersonCircle className="icon" />
-        <input
-          type="text"
-          value={userName}
-          placeholder="Entrez votre prénom"
-          onChange={handleChange}
-          required
-        />
-      </div>
+
+      <Input
+        value={inputValue}
+        onChange={handleChange}
+        placeholder={"Entrez votre prénom"}
+        icon={IoPersonCircle}
+        required
+      />
+
       <div className="wrap-button">
         <button>Accéder à mon espace</button>
         <IoChevronForward className="chevron" />
@@ -69,38 +69,6 @@ const LoginFormStyled = styled.form`
     margin: 20px 10px 18px 10px;
   }
 
-  .input-wrap {
-    display: flex;
-    align-items: center;
-
-    font-family: "Open Sans", sans-serif;
-    background-color: ${theme.colors.background_white};
-    font-size: ${theme.fonts.P0};
-    border-radius: ${theme.borderRadius.round};
-    font-weight: ${theme.weights.regular};
-    padding: 18px 24px;
-
-    .icon {
-      font-size: 15px;
-      margin-right: 8px;
-      color: ${theme.colors.greySemiDark};
-      //min-width: 1em;
-    }
-
-    input {
-      border: none;
-      font-size: 15px;
-      color: ${theme.colors.dark};
-      background-color: ${theme.colors.background_white};
-      //width:100%;
-      //display: flex;
-    }
-
-    &::placeholder {
-      background-color: ${theme.colors.background_white};
-      color: ${theme.colors.greyLight};
-    }
-  }
   .wrap-button {
     display: flex;
     align-items: center;
