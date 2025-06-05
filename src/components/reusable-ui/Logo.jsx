@@ -5,8 +5,8 @@ import { theme } from "../../theme/index";
 function Logo() {
   return (
     <LogoStyled>
-      <h1>Crazee</h1> <img src={LogoCB} alt="Logo Crazee Burger" />
-      <h1>Burger</h1>
+      <p>Crazee</p> <img src={LogoCB} alt="Logo Crazee Burger" />
+      <p>Burger</p>
     </LogoStyled>
   );
 }
@@ -18,7 +18,7 @@ const LogoStyled = styled.div`
   align-items: center;
   transform: scale(2.5);
 
-  h1 {
+  p {
     display: inline;
     text-align: center;
     text-transform: uppercase;
