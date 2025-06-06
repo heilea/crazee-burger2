@@ -5,9 +5,7 @@ import Logo from "../../reusable-ui/Logo";
 function LoginPage() {
   return (
     <LoginPageStyled>
-      <span className="logo">
-        <Logo />
-      </span>
+      <Logo className="logo" />
 
       <LoginForm />
     </LoginPageStyled>
@@ -42,6 +40,6 @@ const LoginPageStyled = styled.div`
   }
 
   .logo {
-    transform: scale(2.5);
+    transform: scale(2.5); //scale up Logo size via props
   }
 `;
