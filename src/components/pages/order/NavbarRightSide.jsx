@@ -1,17 +1,11 @@
-import { IoPersonCircle } from "react-icons/io5";
-import { Link } from "react-router";
 import styled from "styled-components";
+import Profile from "./Profile";
 
 function NavbarRightSide({ username }) {
   return (
     <RigthSideStyled>
-      <div className="profile">
-        <p>Hey, {username}</p>
-        <Link to={"/"}>
-          <button>Deconnexion</button>
-        </Link>
-      </div>
-      {<IoPersonCircle className="icon" />}
+      <div className="admin-button">Admin Button</div>
+      <Profile username={username} />
     </RigthSideStyled>
   );
 }
@@ -19,15 +13,13 @@ function NavbarRightSide({ username }) {
 export default NavbarRightSide;
 
 const RigthSideStyled = styled.div`
-  background: pink;
   display: flex;
   align-items: center;
+  padding-right: 50px;
+  gap: 60px;
   height: 100%; // Utile ?
 
-  .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .admin-button {
   }
 
   .icon {

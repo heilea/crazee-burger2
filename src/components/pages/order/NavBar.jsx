@@ -1,11 +1,11 @@
-import RawLogo from "../../reusable-ui/Logo";
 import styled from "styled-components";
 import NavbarRightSide from "./NavbarRightSide";
+import Logo from "../../reusable-ui/Logo";
 
 function NavBar({ username }) {
   return (
     <NavBarStyled>
-      <RawLogo />
+      <Logo style={"logo"} />
 
       <NavbarRightSide username={username} />
     </NavBarStyled>
@@ -22,4 +22,8 @@ const NavBarStyled = styled.nav`
   align-items: center;
   height: 10vh;
   padding: 0 20px;
+
+  .logo {
+    height: 100%;
+  }
 `;

@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 import { theme } from "../../theme/index";
 
-function Logo({ className = "" }) {
+function Logo({ style }) {
   return (
-    <LogoStyled className={className}>
+    <LogoStyled className={style}>
       <p>Crazee</p> <img src="/assets/logo.png" alt="Logo Crazee Burger" />
       <p>Burger</p>
     </LogoStyled>
