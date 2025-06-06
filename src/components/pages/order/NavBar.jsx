@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import NavbarRightSide from "./NavbarRightSide";
 import Logo from "../../reusable-ui/Logo";
+import { theme } from "../../../theme";
 
 function NavBar({ username }) {
   return (
@@ -15,13 +16,15 @@ function NavBar({ username }) {
 export default NavBar;
 
 const NavBarStyled = styled.nav`
-  background-color: blue;
+  background-color: ${theme.colors.white};
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
   padding: 0 20px;
+  border-top-left-radius: ${theme.borderRadius.extraRound};
+  border-top-right-radius: ${theme.borderRadius.extraRound};
 
   .logo {
     height: 100%;

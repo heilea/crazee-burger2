@@ -26,7 +26,6 @@ const OrderPageStyled = styled.div`
   align-items: center;
 
   .container {
-    background: purple;
     display: flex;
     flex-direction: column;
     align-items: center;
