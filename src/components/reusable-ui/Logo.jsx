@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { theme } from "../../theme/index";
 
-function Logo({ style }) {
+function Logo({ style, onClick }) {
   return (
     <LogoStyled className={style}>
       <p>Crazee</p> <img src="/assets/logo.png" alt="Logo Crazee Burger" />

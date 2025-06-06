@@ -5,7 +5,7 @@ import Logo from "../../reusable-ui/Logo";
 function LoginPage() {
   return (
     <LoginPageStyled>
-      <Logo className="logo" />
+      <Logo style="logo" />
 
       <LoginForm />
     </LoginPageStyled>

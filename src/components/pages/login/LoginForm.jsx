@@ -51,19 +51,21 @@ const LoginFormStyled = styled.form`
   margin: 0px auto;
   padding: 2.5rem 2rem;
   border-radius: 5px;
-  font-family: "Amatic SC", cursive;
   color: ${theme.colors.white};
 
   hr {
     border: 1.5px solid #f56a2c;
     margin-top: 32px;
     margin-bottom: 40px;
+    
   }
   h1 {
+    font-family: "Amatic SC", cursive;
     font-size: ${theme.fonts.P5};
   }
 
   h2 {
+    font-family: "Amatic SC", cursive;
     font-size: ${theme.fonts.P4};
     margin: 20px 10px 18px 10px;
   }

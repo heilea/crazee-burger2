@@ -2,11 +2,19 @@ import styled from "styled-components";
 import NavbarRightSide from "./NavbarRightSide";
 import Logo from "../../reusable-ui/Logo";
 import { theme } from "../../../theme";
+import { useNavigate } from "react-router";
 
 function NavBar({ username }) {
+
+const HomeClick =  useNavigate()
+  
+const handleClick = () =>{
+  HomeClick()
+}
+  
   return (
     <NavBarStyled>
-      <Logo style={"logo"} />
+      <Logo style={"logo"} onClick={handleClick} />
 
       <NavbarRightSide username={username} />
     </NavBarStyled>
