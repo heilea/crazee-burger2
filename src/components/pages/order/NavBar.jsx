@@ -2,19 +2,12 @@ import styled from "styled-components";
 import NavbarRightSide from "./NavbarRightSide";
 import Logo from "../../reusable-ui/Logo";
 import { theme } from "../../../theme";
-import { useNavigate } from "react-router";
+import { refreshPage } from "../../../utils/refresh";
 
 function NavBar({ username }) {
-
-const HomeClick =  useNavigate()
-  
-const handleClick = () =>{
-  HomeClick()
-}
-  
   return (
     <NavBarStyled>
-      <Logo style={"logo"} onClick={handleClick} />
+      <Logo style={"logo"} onClick={refreshPage} />
 
       <NavbarRightSide username={username} />
     </NavBarStyled>
@@ -35,6 +28,6 @@ const NavBarStyled = styled.nav`
   border-top-right-radius: ${theme.borderRadius.extraRound};
 
   .logo {
-    height: 100%;
+    cursor: pointer;
   }
 `;

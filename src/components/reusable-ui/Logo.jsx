@@ -4,7 +4,7 @@ import { theme } from "../../theme/index";
 
 function Logo({ style, onClick }) {
   return (
-    <LogoStyled className={style}>
+    <LogoStyled className={style} onClick={onClick}>
       <p>Crazee</p> <img src="/assets/logo.png" alt="Logo Crazee Burger" />
       <p>Burger</p>
     </LogoStyled>
