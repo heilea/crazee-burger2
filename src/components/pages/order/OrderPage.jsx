@@ -1,7 +1,8 @@
 import { useParams } from "react-router";
 import styled from "styled-components";
-import NavBar from "./NavBar";
-import Main from "./Main";
+
+import NavBar from "./navbar/NavBar";
+import Main from "./menu/Main";
 
 function OrderPage() {
   const { userName } = useParams();
@@ -10,6 +11,7 @@ function OrderPage() {
     <OrderPageStyled>
       <div className="container">
         <NavBar username={userName} />
+
         <Main />
       </div>
     </OrderPageStyled>
