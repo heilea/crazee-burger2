@@ -45,27 +45,27 @@ function LoginForm() {
 export default LoginForm;
 
 const LoginFormStyled = styled.form`
-  //background-color: green;
   text-align: center;
   max-width: 500px;
   min-width: 400px;
   margin: 0px auto;
   padding: 2.5rem 2rem;
   border-radius: 5px;
-  font-family: "Amatic SC", cursive;
+  color: ${theme.colors.white};
 
   hr {
     border: 1.5px solid #f56a2c;
     margin-top: 32px;
     margin-bottom: 40px;
+    
   }
   h1 {
-    color: ${theme.colors.white};
+    font-family: "Amatic SC", cursive;
     font-size: ${theme.fonts.P5};
   }
 
   h2 {
-    color: ${theme.colors.white};
+    font-family: "Amatic SC", cursive;
     font-size: ${theme.fonts.P4};
     margin: 20px 10px 18px 10px;
   }

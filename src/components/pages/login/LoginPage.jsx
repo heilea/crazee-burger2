@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import LoginForm from "./LoginForm";
-import bgImage from "../../../assets/burger-background.jpg";
 import Logo from "../../reusable-ui/Logo";
 
 function LoginPage() {
   return (
     <LoginPageStyled>
-      <Logo />
+      <Logo style="logo" />
 
       <LoginForm />
     </LoginPageStyled>
@@ -26,7 +25,7 @@ const LoginPageStyled = styled.div`
 
   &::before {
     content: "";
-    background-image: url(${bgImage});
+    background-image: url("/assets/burger-background.jpg");
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -38,5 +37,9 @@ const LoginPageStyled = styled.div`
     right: 0;
     bottom: 0;
     z-index: -1;
+  }
+
+  .logo {
+    transform: scale(2.5); //scale up Logo size via props
   }
 `;

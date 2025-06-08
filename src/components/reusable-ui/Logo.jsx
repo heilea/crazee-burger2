@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import LogoCB from "../../assets/logo.png";
+
 import { theme } from "../../theme/index";
 
-function Logo() {
+function Logo({ style, onClick }) {
   return (
-    <LogoStyled>
-      <h1>Crazee</h1> <img src={LogoCB} alt="Logo Crazee Burger" />
-      <h1>Burger</h1>
+    <LogoStyled className={style} onClick={onClick}>
+      <p>Crazee</p> <img src="/assets/logo.png" alt="Logo Crazee Burger" />
+      <p>Burger</p>
     </LogoStyled>
   );
 }
@@ -16,9 +16,8 @@ export default Logo;
 const LogoStyled = styled.div`
   display: flex;
   align-items: center;
-  transform: scale(2.5);
 
-  h1 {
+  p {
     display: inline;
     text-align: center;
     text-transform: uppercase;
